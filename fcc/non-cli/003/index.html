@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Studying Vue!</title>
+</head>
+<body>
+  <div id="root">
+    <h1>{{ text }}</h1>
+    <input type="text" v-model="text">
+    <button v-bind:disabled="text.length === 0" onclick="alert('Done!')">Submit</button>
+  </div>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#root',
+      data: {
+        text: '',
+      }
+    });
+  </script>
+</body>
+</html>

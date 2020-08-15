@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Studying Vue!</title>
+</head>
+<body>
+  <div id="root">
+    <!-- Conditionals -->
+    <div v-if="count === 1">
+      Green
+    </div>
+    <div v-else-if="count === 2">
+      Red
+    </div>
+    <div v-else>
+      Orange
+    </div>
+
+    <!-- v-show directive -->
+    <div v-show="count === 0">
+      Blue
+    </div>
+  </div>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#root',
+      data: {
+        count: 0,
+      }
+    });
+  </script>
+</body>
+</html>
